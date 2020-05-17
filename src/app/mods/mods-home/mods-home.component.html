@@ -1,0 +1,21 @@
+<app-divider>
+    Modal Component
+</app-divider>
+<button class="ui button" (click)="toggleModal()">Open Modal</button>
+<app-modal *ngIf="modalState" (closeevent) = "toggleModal()" >
+    <span modalHeader>
+        MOdal 11!!
+    </span>
+    <p>
+        Some customized content for the model window inserted from parent Comp
+    </p>
+
+    <ng-container modalFooter>
+        <!-- <button class="ui button" (click)="toggleModal()">Close it</button> -->
+    </ng-container>
+</app-modal>
+
+<app-divider>
+    Accordion Component
+</app-divider>
+<app-accordion [items] = "items"></app-accordion>
